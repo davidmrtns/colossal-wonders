@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "colossal_wonders",
+	"version": "${version}",
+	"name": "Colossal Wonders",
+	"description": "Colossal Wonders is a magic-themed mod introducing Aether, a mystical energy tied to the four elements. Craft wands, wand cores and harness energy to cast powerful spells and shape elemental forces.",
+	"authors": [
+		"davidmrtns"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/colossal_wonders/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-datagen": [
+          "com.davidmrtns.colossalwonders.ColossalWondersDataGenerator"
+		],
+		"main": [
+          "com.davidmrtns.colossalwonders.ColossalWonders"
+		],
+		"client": [
+          "com.davidmrtns.colossalwonders.ColossalWondersClient"
+		]
+	},
+	"mixins": [
+		"modid.mixins.json",
+		{
+			"config": "modid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

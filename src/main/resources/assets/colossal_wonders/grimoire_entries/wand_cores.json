@@ -1,0 +1,13 @@
+{
+  "id": "colossal_wonders:wand_cores",
+  "parent": "colossal_wonders:wand",
+  "title": "grimoire.entry.wand_cores.title",
+  "icon": "colossal_wonders:sentient_wand_core",
+  "tooltip": "grimoire.entry.wand_cores.tooltip",
+  "content": [
+    {
+      "type": "text",
+      "text": "grimoire.entry.wand_cores.page1"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "opalynth",
+  "ingredients": [
+    {
+      "item": "colossal_wonders:opalynth_crystal"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "colossal_wonders:opalynth_crystal_shard"
+  }
+}

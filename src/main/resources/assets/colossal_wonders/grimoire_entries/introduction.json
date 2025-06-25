@@ -1,0 +1,17 @@
+{
+  "id": "colossal_wonders:introduction",
+  "parent": null,
+  "title": "grimoire.entry.introduction.title",
+  "icon": "colossal_wonders:grimoire",
+  "tooltip": "grimoire.entry.introduction.tooltip",
+  "content": [
+    {
+      "type": "text",
+      "text": "grimoire.entry.introduction.page1"
+    },
+    {
+      "type": "text",
+      "text": "grimoire.entry.introduction.page2"
+    }
+  ]
+}

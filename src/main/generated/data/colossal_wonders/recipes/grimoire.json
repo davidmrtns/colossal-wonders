@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:book"
+    },
+    "*": {
+      "item": "colossal_wonders:opalynth_dust"
+    }
+  },
+  "pattern": [
+    "***",
+    "*#*",
+    "***"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colossal_wonders:grimoire"
+  }
+}

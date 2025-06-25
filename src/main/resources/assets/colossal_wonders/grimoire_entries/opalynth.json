@@ -1,0 +1,17 @@
+{
+  "id": "colossal_wonders:opalynth",
+  "parent": "colossal_wonders:introduction",
+  "title": "grimoire.entry.opalynth.title",
+  "icon": "colossal_wonders:opalynth_crystal",
+  "tooltip": "grimoire.entry.opalynth.tooltip",
+  "content": [
+    {
+      "type": "text",
+      "text": "grimoire.entry.opalynth.page1"
+    },
+    {
+      "type": "text",
+      "text": "grimoire.entry.opalynth.page2"
+    }
+  ]
+}

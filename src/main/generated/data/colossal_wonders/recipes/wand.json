@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "colossal_wonders:opalynth_ingot"
+    },
+    "-": {
+      "tag": "minecraft:wooden_buttons"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  #",
+    " / ",
+    "-  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "colossal_wonders:wand"
+  }
+}

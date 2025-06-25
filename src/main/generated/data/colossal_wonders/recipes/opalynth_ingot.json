@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "v": {
+      "item": "colossal_wonders:opalynth_crystal_shard"
+    }
+  },
+  "pattern": [
+    "vvv",
+    "v#v",
+    "vvv"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colossal_wonders:opalynth_ingot"
+  }
+}

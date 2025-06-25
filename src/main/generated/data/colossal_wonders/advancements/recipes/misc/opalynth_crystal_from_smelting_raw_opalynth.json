@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_opalynth": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colossal_wonders:raw_opalynth"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:opalynth_crystal_from_smelting_raw_opalynth"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_opalynth"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:opalynth_crystal_from_smelting_raw_opalynth"
+    ]
+  }
+}

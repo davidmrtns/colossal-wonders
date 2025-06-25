@@ -1,0 +1,13 @@
+{
+  "id": "colossal_wonders:wand_energy",
+  "parent": "colossal_wonders:wand",
+  "title": "grimoire.entry.wand_energy.title",
+  "icon": "minecraft:redstone",
+  "tooltip": "grimoire.entry.wand_energy.tooltip",
+  "content": [
+    {
+      "type": "text",
+      "text": "grimoire.entry.wand_energy.page1"
+    }
+  ]
+}

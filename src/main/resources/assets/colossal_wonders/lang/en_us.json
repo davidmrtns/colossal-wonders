@@ -1,0 +1,46 @@
+{
+  "item.colossal_wonders.wand": "Wand",
+  "item.colossal_wonders.grimoire": "The Grimoire",
+  "item.colossal_wonders.sentient_wand_core": "Sentient Wand Core",
+  "item.colossal_wonders.frozen_wand_core": "Frozen Wand Core",
+  "item.colossal_wonders.shield_wand_core": "Shield Wand Core",
+  "item.colossal_wonders.raw_opalynth": "Raw Opalynth",
+  "item.colossal_wonders.opalynth_crystal": "Opalynth Crystal",
+  "item.colossal_wonders.opalynth_crystal_shard": "Opalynth Crystal Shard",
+  "item.colossal_wonders.opalynth_dust": "Opalynth Dust",
+  "item.colossal_wonders.opalynth_ingot": "Opalynth Ingot",
+
+  "block.colossal_wonders.opalynth_ore": "Opalynth Ore",
+  "block.colossal_wonders.deepslate_opalynth_ore": "Deepslate Opalynth Ore",
+
+  "itemgroup.colossal_wonders": "Colossal Wonders",
+
+  "item.colossal_wonders.wand.tooltip_energy": "Energy: %d",
+  "item.colossal_wonders.wand.tooltip_wand_core": "Equipped Wand Core: %s",
+  "item.colossal_wonders.wand.tooltip_index": "Wando Core Index: %d",
+
+  "key.colossal-wonders.change_wand_core": "Change Wand Core",
+
+  "grimoire.entry.introduction.title": "Introduction",
+  "grimoire.entry.introduction.tooltip": "Introduction",
+  "grimoire.entry.introduction.page1": "Throughout every corner of existence, unseen by the naked eye, flows a mystical substance known as Aether. Much like light, Aether behaves as both wave and particle — an omnipresent force that permeates the atmosphere, matter, and even life itself. It is not simply energy; it is the very fabric that binds the elemental essence of the world.",
+  "grimoire.entry.introduction.page2": "Through advanced methods of magical study, Aether can be separated into four distinct spectral strands, each corresponding to a basic element: earth, air, fire, and water. These strands form the elemental foundation of all things, and by understanding Aether, one gains the ability to manipulate the world on a fundamental level. \n\nYet raw Aether cannot be wielded directly. It must be contained, guided, and given purpose.",
+
+  "grimoire.entry.opalynth.title": "Opalynth",
+  "grimoire.entry.opalynth.tooltip": "Opalynth",
+  "grimoire.entry.opalynth.page1": "Deep within the Overworld's crost lays one of the brutest manifestations of Aether: the Opalynth. This magical ore can be harvested and smelted to generate Opalynth Crystals, essential ingredient for the magical manipulation.",
+  "grimoire.entry.opalynth.page2": "Opalynth Crystals can be broken down to Opalynth Shards, which can be combined with mundane materials such as iron ingots, and Opalynth Shards can be turned into Opalynth Dust, which uses will be eventually discovered by you.",
+
+  "grimoire.entry.wand.title": "The Wand",
+  "grimoire.entry.wand.tooltip": "The Wand",
+  "grimoire.entry.wand.page1": "The wand is the main tool when it comes to channeling and shaping raw Aether into tangible magical effects. Acting as an extension of the wielder's will, it allows for the casting of spells and the manipulation of magical constructs. Without a properly attuned wand, most advanced forms of spellwork are impossible to perform.",
+  "grimoire.entry.wand.page2": "Wands can be crafted with stick, a wooden button and an Opalynth Ingot. They also require both a Wand Core and Energy in order to perform spells. The core determines the nature of the spell that will be cast, acting as a magical conduit, while the energy fuels each casting.",
+
+  "grimoire.entry.wand_cores.title": "Wand Cores",
+  "grimoire.entry.wand_cores.tooltip": "Wand Cores",
+  "grimoire.entry.wand_cores.page1": "Wand Cores act as a recipe for the spell. It can be crafted with one Opalynth Crystal and different mundane or magical materials that determine the final outcome. The resulting core determines not only what kind of spell can be cast, but also how it interacts with the world around it.",
+
+  "grimoire.entry.wand_energy.title": "Wand Energy",
+  "grimoire.entry.wand_energy.tooltip": "Wand Energy",
+  "grimoire.entry.wand_energy.page1": "While Wand Cores determine the structure and effect of a spell, they alone are not enough to cast it. Energy is the necessary catalyst — the power that flows through the wand and activates the core's encoded magic, allowing the spell to be expelled into the world."
+}
