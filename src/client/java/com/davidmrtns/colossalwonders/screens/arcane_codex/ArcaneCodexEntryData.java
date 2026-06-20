@@ -1,16 +1,16 @@
-package com.davidmrtns.colossalwonders.screens.grimoire;
+package com.davidmrtns.colossalwonders.screens.arcane_codex;
 
 import java.util.List;
 
-public class GrimoireEntryData {
+public class ArcaneCodexEntryData {
     public String id;
     public String title;
     public String icon;
     public String tooltip;
     public String parent;
-    public List<GrimoireContent> content;
+    public List<ArcaneCodexContent> content;
 
-    public static class GrimoireContent {
+    public static class ArcaneCodexContent {
         public String type;
         public String text;     // for "text"
         public String texture;  // for "image"

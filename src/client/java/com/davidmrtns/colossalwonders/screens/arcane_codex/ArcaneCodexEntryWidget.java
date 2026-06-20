@@ -1,4 +1,4 @@
-package com.davidmrtns.colossalwonders.screens.grimoire;
+package com.davidmrtns.colossalwonders.screens.arcane_codex;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
@@ -7,14 +7,14 @@ import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 
-public class GrimoireEntryWidget extends ClickableWidget {
+public class ArcaneCodexEntryWidget extends ClickableWidget {
     private final ItemStack icon;
     private final Text tooltip;
-    private final GrimoireEntryData data;
+    private final ArcaneCodexEntryData data;
     public int baseX;
     public int baseY;
 
-    public GrimoireEntryWidget(int x, int y, ItemStack icon, Text tooltip, GrimoireEntryData data) {
+    public ArcaneCodexEntryWidget(int x, int y, ItemStack icon, Text tooltip, ArcaneCodexEntryData data) {
         super(x, y, 20, 20, Text.literal(""));
         this.icon = icon;
         this.tooltip = tooltip;
@@ -23,8 +23,8 @@ public class GrimoireEntryWidget extends ClickableWidget {
 
     @Override
     public void onClick(double mouseX, double mouseY) {
-        MinecraftClient.getInstance().setScreen(new GrimoireContentScreen(data));
-        System.out.println("Opening the grimoire screen");
+        MinecraftClient.getInstance().setScreen(new ArcaneCodexContentScreen(data));
+        System.out.println("Opening the arcane codex screen");
     }
 
     @Override

@@ -1,17 +1,17 @@
 {
   "id": "colossal_wonders:opalynth",
   "parent": "colossal_wonders:introduction",
-  "title": "grimoire.entry.opalynth.title",
+  "title": "arcane_codex.entry.opalynth.title",
   "icon": "colossal_wonders:opalynth_crystal",
-  "tooltip": "grimoire.entry.opalynth.tooltip",
+  "tooltip": "arcane_codex.entry.opalynth.tooltip",
   "content": [
     {
       "type": "text",
-      "text": "grimoire.entry.opalynth.page1"
+      "text": "arcane_codex.entry.opalynth.page1"
     },
     {
       "type": "text",
-      "text": "grimoire.entry.opalynth.page2"
+      "text": "arcane_codex.entry.opalynth.page2"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "colossal_wonders:item/grimoire"
+    "layer0": "colossal_wonders:item/arcane_codex"
   }
 }

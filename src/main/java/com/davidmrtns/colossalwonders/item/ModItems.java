@@ -2,7 +2,7 @@ package com.davidmrtns.colossalwonders.item;
 
 import com.davidmrtns.colossalwonders.ColossalWonders;
 import com.davidmrtns.colossalwonders.components.ModComponents;
-import com.davidmrtns.colossalwonders.item.custom.GrimoireItem;
+import com.davidmrtns.colossalwonders.item.custom.ArcaneCodexItem;
 import com.davidmrtns.colossalwonders.item.custom.WandItem;
 import com.davidmrtns.colossalwonders.item.custom.cores.FrozenWandCoreItem;
 import com.davidmrtns.colossalwonders.item.custom.cores.SentientWandCoreItem;
@@ -19,7 +19,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item WAND = registerItem("wand", new WandItem(new Item.Settings().maxCount(1).component(DataComponentTypes.BUNDLE_CONTENTS, BundleContentsComponent.DEFAULT).component(ModComponents.WAND_ENERGY, 100f)));
-    public static final Item GRIMOIRE = registerItem("grimoire", new GrimoireItem(new Item.Settings().maxCount(1)));
+    public static final Item ARCANE_CODEX = registerItem("arcane_codex", new ArcaneCodexItem(new Item.Settings().maxCount(1)));
     public static final Item SENTIENT_WAND_CORE = registerItem("sentient_wand_core", new SentientWandCoreItem(new Item.Settings().maxCount(1)));
     public static final Item FROZEN_WAND_CORE = registerItem("frozen_wand_core", new FrozenWandCoreItem(new Item.Settings().maxCount(1)));
     public static final Item SHIELD_WAND_CORE = registerItem("shield_wand_core", new ShieldWandCoreItem(new Item.Settings().maxCount(1)));

@@ -7,7 +7,7 @@ import com.davidmrtns.colossalwonders.item.ModItems;
 import com.davidmrtns.colossalwonders.item.custom.WandItem;
 import com.davidmrtns.colossalwonders.entities.ModEntities;
 import com.davidmrtns.colossalwonders.networking.DropWandCoreC2SPayload;
-import com.davidmrtns.colossalwonders.networking.OpenGrimoireScreenS2CPayload;
+import com.davidmrtns.colossalwonders.networking.OpenArcaneCodexScreenS2CPayload;
 import com.davidmrtns.colossalwonders.networking.SwapWandCoreC2SPayload;
 import com.davidmrtns.colossalwonders.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -37,7 +37,7 @@ public class ColossalWonders implements ModInitializer {
 
 		PayloadTypeRegistry.playC2S().register(SwapWandCoreC2SPayload.ID, SwapWandCoreC2SPayload.CODEC);
 		PayloadTypeRegistry.playC2S().register(DropWandCoreC2SPayload.ID, DropWandCoreC2SPayload.CODEC);
-		PayloadTypeRegistry.playS2C().register(OpenGrimoireScreenS2CPayload.ID, OpenGrimoireScreenS2CPayload.CODEC);
+		PayloadTypeRegistry.playS2C().register(OpenArcaneCodexScreenS2CPayload.ID, OpenArcaneCodexScreenS2CPayload.CODEC);
 
 		ServerPlayNetworking.registerGlobalReceiver(SwapWandCoreC2SPayload.ID, (payload, context) -> {
 			ServerPlayerEntity player = context.player();

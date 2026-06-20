@@ -29,6 +29,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.OPALYNTH_CRYSTAL_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.OPALYNTH_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.OPALYNTH_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GRIMOIRE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARCANE_CODEX, Models.GENERATED);
     }
 }

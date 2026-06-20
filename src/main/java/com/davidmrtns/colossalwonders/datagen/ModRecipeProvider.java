@@ -55,7 +55,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.WAND)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRIMOIRE, 1)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ARCANE_CODEX, 1)
                 .pattern("***")
                 .pattern("*#*")
                 .pattern("***")
@@ -63,6 +63,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('#', Items.BOOK)
                 .criterion(hasItem(ModItems.OPALYNTH_DUST), conditionsFromItem(ModItems.OPALYNTH_DUST))
                 .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.GRIMOIRE)));
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.ARCANE_CODEX)));
     }
 }

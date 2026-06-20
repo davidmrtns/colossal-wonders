@@ -1,11 +1,11 @@
-package com.davidmrtns.colossalwonders.screens.grimoire;
+package com.davidmrtns.colossalwonders.screens.arcane_codex;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class GrimoireButtonWidget extends ButtonWidget {
+public class ArcaneCodexButtonWidget extends ButtonWidget {
     private final Identifier texture;
     private final int u; // starting X position
     private final int v; // starting Y position
@@ -15,9 +15,9 @@ public class GrimoireButtonWidget extends ButtonWidget {
     private final int fullTextureHeight; // total spritesheet height
     private final float renderScale; // texture scale
 
-    public GrimoireButtonWidget(int x, int y, int width, int height, Text message, PressAction onPress,
-                            Identifier texture, int u, int v, int textureWidth, int textureHeight,
-                            int fullTextureWidth, int fullTextureHeight, float renderScale) {
+    public ArcaneCodexButtonWidget(int x, int y, int width, int height, Text message, PressAction onPress,
+                                   Identifier texture, int u, int v, int textureWidth, int textureHeight,
+                                   int fullTextureWidth, int fullTextureHeight, float renderScale) {
         super(x, y, width, height, message, onPress, ButtonWidget.DEFAULT_NARRATION_SUPPLIER);
         this.texture = texture;
         this.u = u;

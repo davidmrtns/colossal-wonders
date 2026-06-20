@@ -1,4 +1,4 @@
-package com.davidmrtns.colossalwonders.screens.grimoire;
+package com.davidmrtns.colossalwonders.screens.arcane_codex;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.item.ItemStack;
@@ -11,15 +11,15 @@ import net.minecraft.util.Identifier;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class GrimoireScreen extends Screen {
-    private final Map<GrimoireTreeNode, GrimoireEntryWidget> entryWidgets = new java.util.HashMap<>();
+public class ArcaneCodexScreen extends Screen {
+    private final Map<ArcaneCodexTreeNode, ArcaneCodexEntryWidget> entryWidgets = new java.util.HashMap<>();
 
     private int dragStartX, dragStartY;
     private int offsetX = 0, offsetY = 0;
     private boolean dragging = false;
 
-    public GrimoireScreen() {
-        super(Text.literal("Grimoire Screen"));
+    public ArcaneCodexScreen() {
+        super(Text.literal("Arcane Codex Screen"));
     }
 
     @Override
@@ -27,9 +27,9 @@ public class GrimoireScreen extends Screen {
         entryWidgets.clear();
 
         // mounts the tree nodes
-        Map<String, GrimoireEntryData> entryMap = GrimoireDataLoader.ENTRIES.values().stream()
+        Map<String, ArcaneCodexEntryData> entryMap = ArcaneCodexDataLoader.ENTRIES.values().stream()
                 .collect(Collectors.toMap(e -> e.id, e -> e));
-        var roots = GrimoireTreeBuilder.buildTree(entryMap);
+        var roots = ArcaneCodexTreeBuilder.buildTree(entryMap);
 
         // layout parameters
         int baseX = width / 2;
@@ -39,19 +39,19 @@ public class GrimoireScreen extends Screen {
 
         int[] col = new int[]{0};
 
-        for (GrimoireTreeNode root : roots) {
+        for (ArcaneCodexTreeNode root : roots) {
             renderTree(root, baseX, baseY, col, 0, spacingX, spacingY);
         }
     }
 
-    private void renderTree(GrimoireTreeNode node, int baseX, int baseY, int[] col, int depth, int spacingX, int spacingY) {
+    private void renderTree(ArcaneCodexTreeNode node, int baseX, int baseY, int[] col, int depth, int spacingX, int spacingY) {
         int x = baseX + col[0] * spacingX;
         int y = baseY + depth * spacingY;
 
-        GrimoireEntryData data = node.data;
+        ArcaneCodexEntryData data = node.data;
         ItemStack icon = new ItemStack(Registries.ITEM.getOrEmpty(new Identifier(data.icon)).orElse(Items.BARRIER));
 
-        GrimoireEntryWidget widget = new GrimoireEntryWidget(x + offsetX, y + offsetY, icon, Text.translatable(data.tooltip), data);
+        ArcaneCodexEntryWidget widget = new ArcaneCodexEntryWidget(x + offsetX, y + offsetY, icon, Text.translatable(data.tooltip), data);
 
         widget.baseX = x;
         widget.baseY = y;
@@ -59,7 +59,7 @@ public class GrimoireScreen extends Screen {
         this.addDrawableChild(widget);
         entryWidgets.put(node, widget);
 
-        for (GrimoireTreeNode child : node.children) {
+        for (ArcaneCodexTreeNode child : node.children) {
             col[0]++;
             renderTree(child, baseX, baseY, col, depth + 1, spacingX, spacingY);
         }
@@ -86,7 +86,7 @@ public class GrimoireScreen extends Screen {
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         this.renderBackground(context, mouseX, mouseY, delta);
 
-        for (GrimoireEntryWidget widget : entryWidgets.values()) {
+        for (ArcaneCodexEntryWidget widget : entryWidgets.values()) {
             widget.setPosition(widget.baseX + offsetX, widget.baseY + offsetY);
         }
 
@@ -94,15 +94,15 @@ public class GrimoireScreen extends Screen {
         context.getMatrices().push();
         context.getMatrices().translate(0, 0, 0);
 
-        for (Map.Entry<GrimoireTreeNode, GrimoireEntryWidget> entry : entryWidgets.entrySet()) {
-            GrimoireTreeNode parent = entry.getKey();
-            GrimoireEntryWidget parentWidget = entry.getValue();
+        for (Map.Entry<ArcaneCodexTreeNode, ArcaneCodexEntryWidget> entry : entryWidgets.entrySet()) {
+            ArcaneCodexTreeNode parent = entry.getKey();
+            ArcaneCodexEntryWidget parentWidget = entry.getValue();
 
             int parentX = parentWidget.getX() + parentWidget.getWidth() / 2;
             int parentY = parentWidget.getY() + parentWidget.getHeight() / 2;
 
-            for (GrimoireTreeNode child : parent.children) {
-                GrimoireEntryWidget childWidget = entryWidgets.get(child);
+            for (ArcaneCodexTreeNode child : parent.children) {
+                ArcaneCodexEntryWidget childWidget = entryWidgets.get(child);
                 if (childWidget != null) {
                     int childX = childWidget.getX() + childWidget.getWidth() / 2;
                     int childY = childWidget.getY() + childWidget.getHeight() / 2;
@@ -117,7 +117,7 @@ public class GrimoireScreen extends Screen {
         super.render(context, mouseX, mouseY, delta);
 
         // tooltips
-        for (GrimoireEntryWidget widget : entryWidgets.values()) {
+        for (ArcaneCodexEntryWidget widget : entryWidgets.values()) {
             widget.renderTooltip(context, mouseX, mouseY);
         }
     }
@@ -127,9 +127,9 @@ public class GrimoireScreen extends Screen {
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         if (button == 0) {
             // checks for clicks
-            for (GrimoireEntryWidget widget : entryWidgets.values()) {
+            for (ArcaneCodexEntryWidget widget : entryWidgets.values()) {
                 if (widget.mouseClicked(mouseX, mouseY, button)) {
-                    return true; // clicou num widget, não inicia drag
+                    return true; // clicked a widget, do not start dragging
                 }
             }
 

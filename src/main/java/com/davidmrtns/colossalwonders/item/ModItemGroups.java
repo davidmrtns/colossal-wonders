@@ -15,7 +15,7 @@ public class ModItemGroups {
     public static final ItemGroup COLOSSAL_WONDERS_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(ColossalWonders.MOD_ID, "colossal_wonders"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.colossal_wonders"))
-                    .icon(() -> new ItemStack(ModItems.GRIMOIRE)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.ARCANE_CODEX)).entries((displayContext, entries) -> {
                         entries.add(ModItems.OPALYNTH_CRYSTAL);
                         entries.add(ModItems.OPALYNTH_CRYSTAL_SHARD);
                         entries.add(ModItems.OPALYNTH_DUST);
@@ -25,7 +25,7 @@ public class ModItemGroups {
                         entries.add(ModItems.SENTIENT_WAND_CORE);
                         entries.add(ModItems.FROZEN_WAND_CORE);
                         entries.add(ModItems.SHIELD_WAND_CORE);
-                        entries.add(ModItems.GRIMOIRE);
+                        entries.add(ModItems.ARCANE_CODEX);
                         entries.add(ModBlocks.OPALYNTH_ORE);
                         entries.add(ModBlocks.DEEPSLATE_OPALYNTH_ORE);
                     }).build());

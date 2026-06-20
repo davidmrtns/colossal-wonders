@@ -1,4 +1,4 @@
-package com.davidmrtns.colossalwonders.screens.grimoire;
+package com.davidmrtns.colossalwonders.screens.arcane_codex;
 
 import com.davidmrtns.colossalwonders.ColossalWonders;
 import net.minecraft.client.MinecraftClient;
@@ -10,9 +10,9 @@ import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-public class GrimoireContentScreen extends Screen {
-    private static final Identifier BOOK_TEXTURE = new Identifier(ColossalWonders.MOD_ID, "textures/gui/open_grimoire.png");
-    private final GrimoireEntryData entryData;
+public class ArcaneCodexContentScreen extends Screen {
+    private static final Identifier BOOK_TEXTURE = new Identifier(ColossalWonders.MOD_ID, "textures/gui/open_arcane_codex.png");
+    private final ArcaneCodexEntryData entryData;
     private int bookX, bookY;
     private int scaledWidth, scaledHeight;
     private int currentPage = 0;
@@ -23,7 +23,7 @@ public class GrimoireContentScreen extends Screen {
     private static final float SCALE = 1.25f;
     private static final float TEXT_RENDER_SCALE = 0.9f;
 
-    public GrimoireContentScreen(GrimoireEntryData entryData) {
+    public ArcaneCodexContentScreen(ArcaneCodexEntryData entryData) {
         super(Text.translatable(entryData.tooltip));
         this.entryData = entryData;
     }
@@ -106,7 +106,7 @@ public class GrimoireContentScreen extends Screen {
         int buttonY = (int) (bookY + buttonOffsetY * SCALE);
 
         // previous button
-        this.addDrawableChild(new GrimoireButtonWidget(
+        this.addDrawableChild(new ArcaneCodexButtonWidget(
                 prevButtonX, buttonY,
                 24, 14,
                 Text.translatable("gui.colossal_wonders.previous_page"),
@@ -124,7 +124,7 @@ public class GrimoireContentScreen extends Screen {
         ));
 
         // next button
-        this.addDrawableChild(new GrimoireButtonWidget(
+        this.addDrawableChild(new ArcaneCodexButtonWidget(
                 nextButtonX, buttonY,
                 24, 14,
                 Text.translatable("gui.colossal_wonders.next_page"),
@@ -169,9 +169,9 @@ public class GrimoireContentScreen extends Screen {
 
     @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        // returns to the grimoire screen if the content screen is closed
+        // returns to the arcane codex screen if the content screen is closed
         if (keyCode == 256) {
-            MinecraftClient.getInstance().setScreen(new GrimoireScreen());
+            MinecraftClient.getInstance().setScreen(new ArcaneCodexScreen());
             return true;
         }
         return super.keyPressed(keyCode, scanCode, modifiers);

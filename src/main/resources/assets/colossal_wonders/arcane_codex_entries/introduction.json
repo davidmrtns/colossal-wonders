@@ -1,0 +1,17 @@
+{
+  "id": "colossal_wonders:introduction",
+  "parent": null,
+  "title": "arcane_codex.entry.introduction.title",
+  "icon": "colossal_wonders:arcane_codex",
+  "tooltip": "arcane_codex.entry.introduction.tooltip",
+  "content": [
+    {
+      "type": "text",
+      "text": "arcane_codex.entry.introduction.page1"
+    },
+    {
+      "type": "text",
+      "text": "arcane_codex.entry.introduction.page2"
+    }
+  ]
+}
