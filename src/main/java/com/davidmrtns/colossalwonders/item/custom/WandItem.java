@@ -28,17 +28,13 @@ public class WandItem extends Item {
 
         ItemStack itemStack = user.getStackInHand(hand);
 
-        if(user.isSneaking()) {
-            dropAllBundledItems(itemStack, user);
-        }else{
-            BundleContentsComponent bundleContentsComponent = (BundleContentsComponent)itemStack.get(DataComponentTypes.BUNDLE_CONTENTS);
-            if(bundleContentsComponent != null && !bundleContentsComponent.isEmpty()){
-                WandCore core = (WandCore) bundleContentsComponent.get(0).getItem();
-                float energy = WandItem.getEnergy(itemStack);
-                if(core.calculateWaste() <= energy){
-                    float waste = core.performSpell(world, user, this);
-                    WandItem.consumeEnergy(waste, itemStack);
-                }
+        BundleContentsComponent bundleContentsComponent = (BundleContentsComponent)itemStack.get(DataComponentTypes.BUNDLE_CONTENTS);
+        if(bundleContentsComponent != null && !bundleContentsComponent.isEmpty()){
+            WandCore core = (WandCore) bundleContentsComponent.get(0).getItem();
+            float energy = WandItem.getEnergy(itemStack);
+            if(core.calculateWaste() <= energy){
+                float waste = core.performSpell(world, user, this);
+                WandItem.consumeEnergy(waste, itemStack);
             }
         }
 
