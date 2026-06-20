@@ -81,10 +81,15 @@ public class RadialMenuOverlay {
         double mouseX = client.mouse.getX() / client.getWindow().getScaleFactor();
         double mouseY = client.mouse.getY() / client.getWindow().getScaleFactor();
 
-        double angle = Math.atan2(mouseY - centerY, mouseX - centerX);
-        if (angle < 0) angle += 2 * Math.PI;
+        double mouseAngle = Math.atan2(mouseY - centerY, mouseX - centerX);
+        if (mouseAngle < 0) mouseAngle += 2 * Math.PI;
 
-        int selected = (int) ((angle / (2 * Math.PI)) * options.size());
+        int optionCount = options.size();
+        double anglePerOption = 2 * Math.PI / optionCount;
+        
+        int selected = (int) Math.round((mouseAngle / anglePerOption)) % optionCount;
+        if (selected < 0) selected += optionCount;
+        
         ItemStack chosen = options.get(selected).itemStack;
 
         System.out.println("Selected wand core: " + chosen.getName().getString());
