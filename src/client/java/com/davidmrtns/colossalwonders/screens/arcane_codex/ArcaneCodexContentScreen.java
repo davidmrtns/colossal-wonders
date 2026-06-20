@@ -171,7 +171,7 @@ public class ArcaneCodexContentScreen extends Screen {
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         // returns to the arcane codex screen if the content screen is closed
         if (keyCode == 256) {
-            MinecraftClient.getInstance().setScreen(new ArcaneCodexScreen());
+            MinecraftClient.getInstance().setScreen(ArcaneCodexScreen.getLastInstance());
             return true;
         }
         return super.keyPressed(keyCode, scanCode, modifiers);

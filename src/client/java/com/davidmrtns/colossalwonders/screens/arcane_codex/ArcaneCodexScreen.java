@@ -18,6 +18,9 @@ public class ArcaneCodexScreen extends Screen {
     private int offsetX = 0, offsetY = 0;
     private boolean dragging = false;
 
+    // stores the instance to return to when closing content screens
+    private static ArcaneCodexScreen lastInstance = null;
+
     public ArcaneCodexScreen() {
         super(Text.literal("Arcane Codex Screen"));
     }
@@ -42,6 +45,9 @@ public class ArcaneCodexScreen extends Screen {
         for (ArcaneCodexTreeNode root : roots) {
             renderTree(root, baseX, baseY, col, 0, spacingX, spacingY);
         }
+
+        // save this instance
+        lastInstance = this;
     }
 
     private void renderTree(ArcaneCodexTreeNode node, int baseX, int baseY, int[] col, int depth, int spacingX, int spacingY) {
@@ -162,5 +168,12 @@ public class ArcaneCodexScreen extends Screen {
             return true;
         }
         return super.mouseReleased(mouseX, mouseY, button);
+    }
+
+    public static ArcaneCodexScreen getLastInstance() {
+        if (lastInstance == null) {
+            lastInstance = new ArcaneCodexScreen();
+        }
+        return lastInstance;
     }
 }
